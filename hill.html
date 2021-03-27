@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<!-- Página com detalhes da ladeira -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OurHills | Ladeira</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin="" />
+
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>
+
+    <link rel="icon" href="./public/images/logo3-icon.png">
+
+    <link rel="stylesheet" href="./public/css/main.css">
+    <link rel="stylesheet" href="./public/css/animation.css">
+    <link rel="stylesheet" href="./public/css/page-hill.css">
+    <link rel="stylesheet" href="./public/css/sidebar.css">
+    <link rel="stylesheet" href="./public/css/map.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="page-hill">
+        <aside class="animate-right sidebar">
+
+            <img id="marker-icon" src="./public/images/marker-icon.png" alt="Logo">
+
+            <footer>
+                <button onclick="history.back()">
+                    <img src="./public/images/arrow-back.svg" alt="Voltar">
+                </button>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+            </footer>
+
+        </aside>
+
+        <main class="animate-appear with-sidebar">
+            <div class="hill-details">
+                <img src="./public/images/home.jpg" alt="Ladeira da Getúlio">
+
+
+                <div class="images">
+                    <button onclick="selectImage(event)" class="active" type="button">
+                        <img src="https://source.unsplash.com/random?id=1" alt="Ladeira da Getúlio">
+                    </button>
+
+                    <button onclick="selectImage(event)" type="button">
+                        <img src="https://source.unsplash.com/random?id=2" alt="Ladeira da Getúlio">
+                    </button>
+
+                    <button onclick="selectImage(event)" type="button">
+                        <img src="https://source.unsplash.com/random?id=3" alt="Ladeira da Getúlio">
+                    </button>
+
+                    <button onclick="selectImage(event)" type="button">
+                        <img src="https://source.unsplash.com/random?id=4" alt="Ladeira da Getúlio">
+                    </button>
+
+                    <button onclick="selectImage(event)" type="button">
+                        <img src="https://source.unsplash.com/random?id=5s" alt="Ladeira da Getúlio">
+                    </button>
+                </div>
+                <div>
+                    <div class="hill-details-content">
+
+                        <h1>Ladeira da Getúlio</h1>
+                        <p>
+                            A avenida apresenta diversas ladeiras das mais variadas inclinações, porém o fluxo de
+                            carro é alto.
+                        </p>
+                        <div class="map-conteiner">
+                            <div id="mapid">
+
+                            </div>
+
+                        </div>
+
+                        <hr>
+
+                        <h2>Avisos</h2>
+                        <p>
+                            Fique sempre atento a carros e evite andar em horário de pico.
+                        </p>
+
+                        <button class="primary-button" type="button">
+                            Ver rotas no Google Maps
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+        </main>
+
+    </div>
+
+    <script src="./public/scripts/page-hill.js"></script>
+</body>
+
+</html>

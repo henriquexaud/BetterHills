@@ -1,0 +1,124 @@
+/* Layout da Página de Inicio */
+
+#page-landing {
+    background: linear-gradient(329.54deg,#29b6d1 0%,#00c7c7 100%);
+    
+    min-height: 100vh;
+    text-align: center;
+
+    display: flex;
+}
+
+#conteiner{
+    margin: auto;
+
+    width: min(90%,112rem);  
+}
+
+
+.location,
+ h1,
+.descubra p {
+    height: 16vh;
+}
+
+#logo {
+    width: 200px;
+    height: 200px; 
+    animation-delay: 400ms;
+}
+
+
+.location {
+    animation-delay: 800ms;
+}
+
+
+main h1 {
+    animation-delay: 1200ms;
+    font-size: clamp(6rem, 8vw, 8.4rem);
+}
+
+
+.descubra p {
+    margin: auto;
+    animation-delay: 1600ms;
+}
+
+.descubra a {
+    width: 8rem;
+    height: 8rem;
+    background:#FF3636;
+
+    border: none;
+    border-radius: 2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: auto;
+
+    transition: background 300ms;
+    animation-delay: 2400ms;
+}
+
+.descubra a:hover {
+    background: #EB0A0A;
+}
+
+/*desktop midia*/
+@media (min-width: 760px) {
+
+    #conteiner {
+        padding: 5rem 2rem;
+        /* shorthand background: image repeat position / size */
+        background: url("../images/bg-lp-rem.png") no-repeat 80% / clamp(40rem, 54vw, 70rem);
+    }
+
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .location, 
+    h1, 
+    .descubra p {
+        margin: initial;
+        height: initial;
+        text-align: initial;
+    }
+
+    .location {
+        text-align: right;
+        font-size: 2.4rem;
+        line-height: 1.5;
+    }
+
+    main h1 {
+        font-weight: bold;
+        line-height: 0.88;
+
+        margin: clamp(10%, 9vh, 12%) 0 4rem;
+
+        width: min(300px, 80%);
+    }
+
+    .descubra {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .descubra p {
+        font-size: 2.4rem;
+        line-height: 1.5;
+        width: clamp(20rem, 20vw, 30rem);
+    }
+
+    .descubra a {
+        margin: initial;
+    }
+
+}
