@@ -4,5 +4,8 @@
         "conteiner",
         "mapid",
         "registro"
+    ],
+    "cSpell.ignoreWords": [
+        "preconnect"
     ]
 }
