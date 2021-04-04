@@ -28,3 +28,6 @@ main {
     border-radius: 0 0 20px 20px;
 }
 
+.new-upload + .new-upload {
+    margin: 1.6rem;
+}

@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt_BR">
 
-<!-- Página com detalhes da ladeira -->
+<!-- Página Adicionar Ladeira -->
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OurHills | Ladeira</title>
+
+    <title>OurHills | Adicionar Ladeira</title>
 
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
         integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
         crossorigin="" />
-
-    <!-- Make sure you put this AFTER Leaflet's CSS -->
 
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
         integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
@@ -59,6 +58,9 @@
 
                         <div id="mapid"></div>
 
+                        <input type="hidden" name="lat">
+                        <input type="hidden" name="lng">
+
                         <footer>
                             <a href="#" id="select-point">
                                 Clique no mapa para adicionar a localização
@@ -70,14 +72,14 @@
                     <div class="input-block">
 
                         <label for="name">Nome </label>
-                        <input id="name" name="name">
+                        <input id="name" name="name" required>
 
                     </div>
 
                     <div class="input-block">
 
                         <label for="details">Detalhes </label>
-                        <textarea id="details" name="details"></textarea>
+                        <textarea id="details" name="details" required></textarea>
 
                     </div>
 
@@ -89,7 +91,7 @@
                         <div class="new-upload">
 
                             <div class="images-upload" id="images">
-                                <input name="images" placeholder="cole o link da foto aqui"></input>
+                                <input name="images" placeholder="cole o link da foto aqui" required></input>
                                 <span><img src="public/images/x-png-icon.png" alt="remover foto"></span>
                             </div>
 
@@ -97,14 +99,14 @@
 
 
 
-                        <button>
+                        <button onclick="addPhotoField()" type="button">
                             <img src="./public/images/plus.svg" alt="sinal-de-mais">
                         </button>
 
 
                     </div>
 
-                    <button class="create-button" type="button">
+                    <button class="create-button" type="button submit">
                         Confirmar
                     </button>
 

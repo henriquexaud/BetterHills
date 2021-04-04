@@ -1,2 +1,2 @@
 # OurHill
-App to mark hills on the map for downhill's practices.
+App to map hills for downhill's practices.

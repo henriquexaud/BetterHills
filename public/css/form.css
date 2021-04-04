@@ -56,6 +56,11 @@ fieldset + fieldset {
     padding: 0 1.6rem;
 }
 
+.input-block input:valid, 
+.input-block textarea:valid {
+    border: 1px solid #a1e9c5;
+}
+
 .input-block textarea {
     height: 12.8rem;
     padding: 0 1.6rem;
