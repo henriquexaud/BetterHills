@@ -59,11 +59,11 @@ function addPhotoField() {
 
     //verified field
     const input = newFieldContainer.children[0]
-    console.log(input == "")
 
-    //if (input.value == "") {
-    //return
-    //}
+    if (input.value == "") {
+        return
+    }
+
 
     // clean field
     input.value = "";

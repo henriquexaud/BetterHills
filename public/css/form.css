@@ -116,7 +116,7 @@ fieldset + fieldset {
 .new-upload span {
 
     position: absolute;
-    right: 22px;
+    right: 0px;
     bottom: 12px;
     cursor: pointer;
 }
@@ -124,5 +124,9 @@ fieldset + fieldset {
 .new-upload span img {
     width: 25px;
     height: 25px;
+}
+
+.new-upload + .new-upload {
+    margin: 1.6rem;
 }
 
