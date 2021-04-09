@@ -4,11 +4,20 @@
         "add",
         "conteiner",
         "fild",
+        "icon",
         "mapid",
         "photo",
-        "registro"
+        "registro",
+        "theme",
+        "workbench"
     ],
     "cSpell.ignoreWords": [
-        "preconnect"
+        "color",
+        "editor",
+        "family",
+        "font",
+        "preconnect",
+        "theme",
+        "workbench"
     ]
 }
