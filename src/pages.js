@@ -1,3 +1,5 @@
+const hills = require('./database/fakedata.js');
+
 module.exports = {
 
     index(req, res) {
@@ -6,7 +8,7 @@ module.exports = {
     },
 
     hills(req, res) {
-        return res.render('hills')
+        return res.render('hills', { hills })
     },
 
     hill(req, res) {

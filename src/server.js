@@ -16,7 +16,7 @@ server
     .set('view engine', 'hbs')
 
     // create app rotes
-    .get('/index', pages.index)
+    .get('/', pages.index)
     .get('/hill', pages.hill)
     .get('/hills', pages.hills)
     .get('/create-hill', pages.createHill)
