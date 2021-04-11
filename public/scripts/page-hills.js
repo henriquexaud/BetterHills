@@ -38,7 +38,7 @@ hillsSpan.forEach(span => {
 
     const hill = {
         id: span.dataset.id,
-        name: span.dataset.id,
+        name: span.dataset.name,
         lat: span.dataset.lat,
         lng: span.dataset.lng
     }
