@@ -8,7 +8,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 // create icon
 const icon = L.icon({
-    iconUrl: "./public/images/marker-icon.png",
+    iconUrl: "/images/marker-icon.png",
     iconSize: [68, 68],
     iconAnchor: [29, 68],
     popupAnchor: [170, 2]
@@ -21,42 +21,42 @@ const popup1 = L.popup({
     className: 'map-popup',
     minWidth: 240,
     minHeight: 240
-}).setContent('Ladeira da Getúlio <a href = "hill.html?id=1" class= "choose-hill" ><img src="./public/images/arrow-white.svg"></a>')
+}).setContent('Ladeira da Getúlio <a href = "hill?id=1" class= "choose-hill" ><img src="/images/arrow-white.svg"></a>')
 
 const popup2 = L.popup({
     closeButton: false,
     className: 'map-popup',
     minWidth: 240,
     minHeight: 240
-}).setContent('Pista do Anauá <a href = "hill.html?id=1" class= "choose-hill" ><img src="./public/images/arrow-white.svg"></a>')
+}).setContent('Pista do Anauá <a href = "hill?id=1" class= "choose-hill" ><img src="/images/arrow-white.svg"></a>')
 
 const popup3 = L.popup({
     closeButton: false,
     className: 'map-popup',
     minWidth: 240,
     minHeight: 240
-}).setContent('Ladeira do Canteiro <a href = "hill.html?id=1" class= "choose-hill" ><img src="./public/images/arrow-white.svg"></a>')
+}).setContent('Ladeira do Canteiro <a href = "hill?id=1" class= "choose-hill" ><img src="/images/arrow-white.svg"></a>')
 
 const popup4 = L.popup({
     closeButton: false,
     className: 'map-popup',
     minWidth: 240,
     minHeight: 240
-}).setContent('Pista do Senna <a href = "hill.html?id=1" class= "choose-hill" ><img src="./public/images/arrow-white.svg"></a>')
+}).setContent('Pista do Senna <a href = "hill?id=1" class= "choose-hill" ><img src="/images/arrow-white.svg"></a>')
 
 const popup5 = L.popup({
     closeButton: false,
     className: 'map-popup',
     minWidth: 240,
     minHeight: 240
-}).setContent('Quadras Abandonadas <a href = "hill.html?id=1" class= "choose-hill" ><img src="./public/images/arrow-white.svg"></a>')
+}).setContent('Quadras Abandonadas <a href = "hill?id=1" class= "choose-hill" ><img src="/images/arrow-white.svg"></a>')
 
 const popup6 = L.popup({
     closeButton: false,
     className: 'map-popup',
     minWidth: 240,
     minHeight: 240
-}).setContent('Ladeira do Barro <a href = "hill.html?id=1" class= "choose-hill" ><img src="./public/images/arrow-white.svg"></a>')
+}).setContent('Ladeira do Barro <a href = "hill?id=1" class= "choose-hill" ><img src="/images/arrow-white.svg"></a>')
 
 // create and add marker
 L

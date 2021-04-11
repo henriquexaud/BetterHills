@@ -16,7 +16,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
 
 // create icon
 const icon = L.icon({
-    iconUrl: "./public/images/marker-icon.png",
+    iconUrl: "/images/marker-icon.png",
     iconSize: [68, 68],
     iconAnchor: [29, 68],
     popupAnchor: [170, 2]
@@ -28,7 +28,7 @@ const popup1 = L.popup({
     className: 'map-popup',
     minWidth: 240,
     minHeight: 240
-}).setContent('Ladeira da Getúlio <a href = "hill.html?id=1" class= "choose-hill" ><img src="./public/images/arrow-white.svg"></a>')
+}).setContent('Ladeira da Getúlio <a href = "hill?id=1" class= "choose-hill" ><img src="/images/arrow-white.svg"></a>')
 
 // create and add marker
 L

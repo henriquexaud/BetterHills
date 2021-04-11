@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+
+<!-- Página Adicionar Ladeira -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>OurHills | Adicionar Ladeira</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin="" />
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>
+
+    <link rel="icon" href="/images/logo3-icon.png">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/animation.css">
+    <link rel="stylesheet" href="/css/page-create-hill.css">
+    <link rel="stylesheet" href="/css/sidebar.css">
+    <link rel="stylesheet" href="/css/map.css">
+    <link rel="stylesheet" href="/css/form.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="page-create-hill">
+        <aside class="animate-right sidebar">
+
+            <img id="marker-icon" src="/images/marker-icon.png" alt="Logo">
+
+            <footer>
+                <button onclick="history.back()">
+                    <img src="/images/arrow-back.svg" alt="Voltar">
+                </button>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+            </footer>
+
+        </aside>
+
+        <main class="animate-appear with-sidebar">
+            <form>
+
+                <fieldset>
+                    <legend>Adicionar Ladeira</legend>
+
+                    <div class="map-conteiner">
+
+                        <div id="mapid"></div>
+
+                        <input type="hidden" name="lat">
+                        <input type="hidden" name="lng">
+
+                        <footer>
+                            <a href="#" id="select-point">
+                                Clique no mapa para adicionar a localização
+                            </a>
+                        </footer>
+
+                    </div>
+
+                    <div class="input-block">
+
+                        <label for="name">Nome </label>
+                        <input id="name" name="name" required>
+
+                    </div>
+
+                    <div class="input-block">
+
+                        <label for="details">Detalhes </label>
+                        <textarea id="details" name="details" required></textarea>
+
+                    </div>
+
+                    <div class="input-block">
+
+                        <label for="images">Imagens</label>
+
+
+                        <div class="images-upload" id="images">
+
+                            <div class="new-upload">
+                                <input name="images" placeholder="cole o link da foto aqui" required></input>
+                                <span onclick="deleteField(event)"><img src="/images/x-png-icon.png"
+                                        alt="remover foto"></span>
+                            </div>
+
+                        </div>
+
+
+
+                        <button onclick="addPhotoField()" type="button">
+                            <img src="/images/plus.svg" alt="sinal-de-mais">
+                        </button>
+
+
+                    </div>
+
+                    <button class="create-button" type="button submit">
+                        Confirmar
+                    </button>
+
+
+                </fieldset>
+
+            </form>
+
+        </main>
+
+    </div>
+
+    <script src="/scripts/page-create-hill.js"></script>
+</body>
+
+</html>
