@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt_BR">
+<html lang="pt-br">
 
 <!-- Página da Ladeira -->
 
@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>OurHills | Ladeira</title>
+    <title>OurHills | {{hill.name}}</title>
 
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
         integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
@@ -50,55 +50,38 @@
 
         <main class="animate-appear with-sidebar">
             <div class="hill-details">
-                <img src="/images/home.jpg" alt="Ladeira da Getúlio">
+                <img src="{{hill.firstImage}}" alt="{{hill.name}}">
 
 
                 <div class="images">
+                    {{#each hill.images}}
                     <button onclick="selectImage(event)" class="active" type="button">
-                        <img src="https://source.unsplash.com/random?id=1" alt="Ladeira da Getúlio">
+                        <img src="{{this}}" alt="{{hill.name}}">
                     </button>
+                    {{/each}}
 
-                    <button onclick="selectImage(event)" type="button">
-                        <img src="https://source.unsplash.com/random?id=2" alt="Ladeira da Getúlio">
-                    </button>
-
-                    <button onclick="selectImage(event)" type="button">
-                        <img src="https://source.unsplash.com/random?id=3" alt="Ladeira da Getúlio">
-                    </button>
-
-                    <button onclick="selectImage(event)" type="button">
-                        <img src="https://source.unsplash.com/random?id=4" alt="Ladeira da Getúlio">
-                    </button>
-
-                    <button onclick="selectImage(event)" type="button">
-                        <img src="https://source.unsplash.com/random?id=5s" alt="Ladeira da Getúlio">
-                    </button>
                 </div>
                 <div>
                     <div class="hill-details-content">
 
-                        <h1>Ladeira da Getúlio</h1>
-                        <p>
-                            A avenida apresenta diversas ladeiras das mais variadas inclinações, porém o fluxo de
-                            carro é alto.
-                        </p>
+                        <h1> {{hill.name}} </h1>
+                        <p> {{hill.description}} </p>
+
                         <div class="map-conteiner">
                             <div id="mapid">
-
+                                <span data-lat="{{hill.lat}}" data-lng="{{hill.lng}}"></span>
                             </div>
-
                         </div>
 
                         <hr>
-
                         <h2>Avisos</h2>
-                        <p>
-                            Fique sempre atento a carros e evite andar em horário de pico.
-                        </p>
 
-                        <button class="primary-button" type="button">
+                        <p>{{hill.advises}}</p>
+
+                        <a target="_blank" href="https://maps.google.com/mobile?q={{hill.lat}},{{hill.lng}}&z=15"
+                            class="primary-button" type="button">
                             Ver rotas no Google Maps
-                        </button>
+                        </a>
 
                     </div>
                 </div>
@@ -108,6 +91,7 @@
     </div>
 
     <script src="/scripts/page-hill.js"></script>
+    <script src="/scripts/image-gallery.js"></script>
 </body>
 
 </html>

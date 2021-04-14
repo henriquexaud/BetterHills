@@ -1,4 +1,5 @@
-const hills = require('./database/fakedata.js');
+const Database = require('./database/db');
+const saveHill = require('./database/saveHill')
 
 module.exports = {
 
@@ -7,12 +8,35 @@ module.exports = {
         return res.render('index', { city })
     },
 
-    hills(req, res) {
-        return res.render('hills', { hills })
+    async hills(req, res) {
+        try {
+            const db = await Database;
+            const hills = await db.all("SELECT * FROM hills")
+            return res.render('hills', { hills })
+        } catch (error) {
+            console.log(error)
+            return res.send('Erro no banco de dados')
+        }
     },
 
-    hill(req, res) {
-        return res.render('hill')
+    async hill(req, res) {
+
+        const id = req.query.id
+
+        try {
+            const db = await Database;
+            const results = await db.all(`SELECT * FROM hills WHERE id = "${id}"`)
+            const hill = results[0]
+
+            hill.images = hill.images.split(",")
+            hill.firstImage = hill.images[0]
+
+            return res.render('hill', { hill })
+
+        } catch (erro) {
+            console.log(erro);
+            return res.send('Erro 2 no banco de dados')
+        }
     },
 
     createHill(req, res) {
