@@ -6,8 +6,9 @@ const pages = require('./pages.js');
 
 // initiate the express
 const server = express()
-
 server
+    // use body from req
+    .use(express.urlencoded({ extended: true }))
     // using static files
     .use(express.static('public'))
 
@@ -20,6 +21,7 @@ server
     .get('/hill', pages.hill)
     .get('/hills', pages.hills)
     .get('/create-hill', pages.createHill)
+    .post('/save-hill', pages.saveHill)
 
 
 // turn on the server

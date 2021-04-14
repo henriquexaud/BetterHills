@@ -4,7 +4,7 @@ const saveHill = require('./saveHill')
 Database.then(async db => {
 
     // insert data on table
-    await saveHill(db, {
+    /* await saveHill(db, {
 
         id: 5,
         lat: "2.821869",
@@ -16,17 +16,17 @@ Database.then(async db => {
         advises: "A avenida tem uma iluminação muito ruim então evite horários noturnos"
 
     })
-
+ */
     // consult data on table
     const selectedHills = await db.all("SELECT * FROM hills")
     console.log(selectedHills)
 
-    // consult hill by id
-    const hill = await db.all('SELECT * FROM hills WHERE id = "1"')
-    console.log(hill)
-
-    // delete
-    console.log(await db.run("DELETE FROM hills WHERE id = '3'"))
-    console.log(await db.run("DELETE * FROM hills"))
+    /*  // consult hill by id
+     const hill = await db.all('SELECT * FROM hills WHERE id = "1"')
+     console.log(hill)
+ 
+     // delete
+     console.log(await db.run("DELETE FROM hills WHERE id = '3'"))
+     console.log(await db.run("DELETE * FROM hills")) */
 
 })

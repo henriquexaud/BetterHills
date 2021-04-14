@@ -1,3 +1,4 @@
+
 const Database = require('./database/db');
 const saveHill = require('./database/saveHill')
 
@@ -41,6 +42,33 @@ module.exports = {
 
     createHill(req, res) {
         return res.render('create-hill')
+    },
+
+    async saveHill(req, res) {
+        const fields = req.body
+        if (Object.values(fields).includes('')) {
+            return res.send('Todos os campos devem ser preenchidos')
+        }
+
+        try {
+            // save hill
+            const db = await Database
+            await saveHill(db, {
+                lat: fields.lat,
+                lng: fields.lng,
+                name: fields.name,
+                images: fields.images,
+                description: fields.description,
+                advises: fields.advises,
+            })
+            //redirect
+            return res.redirect("/hills")
+        } catch (error) {
+            console.log(error)
+            return res.send('Erro no banco de dados')
+        }
+
+
     }
 
 }

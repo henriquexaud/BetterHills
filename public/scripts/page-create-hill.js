@@ -1,8 +1,8 @@
 const options = {
-    dragging: false,
+    dragging: true,
     touchZoom: false,
     doubleClickZoom: false,
-    scrollWheelZoom: false,
+    scrollWheelZoom: true,
     zoomControl: false
 }
 
