@@ -18,15 +18,15 @@ Database.then(async db => {
     })
  */
     // consult data on table
-    const selectedHills = await db.all("SELECT * FROM hills")
-    console.log(selectedHills)
+    /* const selectedHills = await db.all("SELECT * FROM hills")
+    console.log(selectedHills) */
 
-    /*  // consult hill by id
-     const hill = await db.all('SELECT * FROM hills WHERE id = "1"')
-     console.log(hill)
- 
-     // delete
-     console.log(await db.run("DELETE FROM hills WHERE id = '3'"))
-     console.log(await db.run("DELETE * FROM hills")) */
+    // consult hill by id
+    /* const hill = await db.all('SELECT * FROM hills WHERE id = "1"')
+    console.log(hill) */
+
+    // delete
+    console.log(await db.run("DELETE FROM hills WHERE id = '6'"))
+    /* console.log(await db.run("DELETE * FROM hills")) */
 
 })
