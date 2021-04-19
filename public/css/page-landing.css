@@ -24,7 +24,7 @@
 
 #logo {
     width: auto;
-    height: 200px; 
+    height: 150px; 
     animation-delay: 400ms;
 }
 
@@ -73,7 +73,7 @@ main h1 {
     #conteiner {
         padding: 5rem 2rem;
         /* shorthand background: image repeat position / size */
-        background: url("../images/bg-index2.png") no-repeat 80% / clamp(40rem, 54vw, 70rem);
+        background: url("../images/bg-index-avatar.png") no-repeat 80% / clamp(40rem, 54vw, 70rem);
     }
 
     header {
