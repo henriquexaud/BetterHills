@@ -1,5 +1,14 @@
+const options = {
+    dragging: true,
+    touchZoom: true,
+    doubleClickZoom: true,
+    scrollWheelZoom: true,
+    zoomControl: false
+
+}
+
 // create map
-const map = L.map('mapid').setView([2.8221589, -60.673142], 14);
+const map = L.map('mapid', options).setView([2.8221589, -60.673142], 14);
 
 // create and add titleLayer and copyRight
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
