@@ -15,7 +15,7 @@
 
 aside {
     width: clamp(34rem, 25vw, 44rem);
-    background: linear-gradient(329.54deg,#29b6d1 0%,#00c7c7 100%);
+    background: linear-gradient(329.54deg, #050e38 0%, #071349 100%);
     padding: clamp(3rem, 5vw, 8rem);
 
     display: flex;
@@ -25,7 +25,7 @@ aside {
 
 aside h2 {
     margin-top: 4rem;
-    font: 800 clamp(3.6rem,10vw,6rem)/1.1 'Nunito' , sans-serif;
+    font: 600 clamp(2.6rem,8vw,4rem)/1.1 'Nunito' , sans-serif;
 }
 
 aside p {
@@ -59,7 +59,7 @@ a.create-hill {
 
     width: 6.4rem;
     height: 6.4rem;
-    background:#29b6d1;
+    background: #091961;
     border: 0;
     border-radius: 2rem;
 
@@ -71,7 +71,7 @@ a.create-hill {
 }
 
 a.create-hill:hover {
-    background:#1f8094;
+    background:#06113f;
 }
 
 /* Popups */
@@ -83,7 +83,7 @@ a.create-hill:hover {
 }
 
 .leaflet-popup-content {
-    color: #0089A5;
+    color: #050e38;
     font-size: 2rem;
     font-weight: 600;
     margin: .8rem 1.2rem;
@@ -97,7 +97,7 @@ a.create-hill:hover {
     width: 4rem;
     height:4rem;
     margin-left: 10px;
-    background: #15C3D6;
+    background:  #050e38;
     border-radius: 12px;
     box-shadow: 17.2868px 27.65px 41.48px rgba(23, 142,166,0.16);
 
@@ -109,7 +109,7 @@ a.create-hill:hover {
 }
 
 .leaflet-popup-content a:hover {
-    background: #17D6EB;
+    background: #02071b;
 }
 
 .leaflet-popup-tip {
