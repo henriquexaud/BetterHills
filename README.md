@@ -1,2 +1,2 @@
 # OurHill
-App to map hills for downhill skate practices.
+App to map hills for skate downhill practices.
