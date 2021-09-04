@@ -9,12 +9,12 @@
 }
 
 #logo1 {
-    width: 200px;
+    width: 100px;
     height: auto;
 }
 
 aside {
-    width: clamp(34rem, 25vw, 44rem);
+    width: clamp(30rem, 20vw, 40rem);
     background: linear-gradient(329.54deg, #050e38 0%, #071349 100%);
     padding: clamp(3rem, 5vw, 8rem);
 
