@@ -1,5 +1,5 @@
-# OurHill
-Web application to map and categorize great hills for skate downhill practices.
+# BigHills
+Web application to map and categorize great hills for skate downhill practices around the globe.
 
 1 - Open terminal and start server:
     $ node src/server.js
