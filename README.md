@@ -1,8 +1,10 @@
 # BigHills
-Web application to map great hills for skate downhill practices.
+Aplicação web que mapeia boas ladeiras para a prática de esportes downhill.
 
-1 - Open terminal and start server:
+1 - Abra o projeto em sua IDE (recomendo o VS Code)
+
+2 - Digite no terminal para iniciar o servidor:
     $ node src/server.js
 
-2 - Open your browser and acess:
+3 - Abra seu navegador e acesse:
     http//:127.0.0.1/5500
