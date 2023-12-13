@@ -1,4 +1,4 @@
-# BigHills
+# BetterHills
 Aplicação web que mapeia boas ladeiras para a prática de esportes downhill.
 
     1 - Abra o projeto em sua IDE (recomendo o VS Code)
